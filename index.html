@@ -1,147 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Nanai Paria High School</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>ABC High School</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Icons -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- ===== HEADER ===== -->
-<header>
-    <div class="logo">
-        <img src="assets/logo.png" alt="School Logo">
-        <h2>Nanai Paria High School</h2>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top glass-nav">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">
+      <i class="fa-solid fa-school"></i> ABC High School
+    </a>
+    <a href="new-admission.html" class="btn btn-glow">
+      <i class="fa-solid fa-user-graduate"></i> Apply Now
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section">
+  <div class="hero-content text-center">
+    <h1>Future of Learning Starts Here</h1>
+    <p>Knowledge • Discipline • Innovation</p>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="container feature-section">
+  <div class="row g-4">
+
+    <div class="col-md-3">
+      <div class="neo-card">
+        <i class="fa-solid fa-book-open"></i>
+        <h5>Academics</h5>
+        <p>SEBA Curriculum (Class 6–10)</p>
+      </div>
     </div>
 
-    <nav id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#academics">Academics</a>
-        <a href="#admission">Admissions</a>
-        <a href="#faculty">Faculty</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <i class="fa-solid fa-bars menu" onclick="toggleMenu()"></i>
-</header>
-
-<!-- ===== HOME ===== -->
-<section id="home" class="hero">
-    <h1>Welcome to Nanai Paria High School</h1>
-    <p>Education with Discipline, Values & Excellence</p>
-
-    <div class="buttons">
-        <a href="#admission" class="btn">Admissions</a>
-        <a href="#contact" class="btn outline">Contact</a>
-    </div>
-</section>
-
-<!-- ===== ABOUT ===== -->
-<section id="about" class="section">
-    <h2>About Our School</h2>
-    <p class="center">
-        Nanai Paria High School is committed to providing quality education and nurturing students
-        to become responsible citizens.
-    </p>
-
-    <div class="cards">
-        <div class="card">
-            <i class="fa-solid fa-user-tie"></i>
-            <h3>Principal</h3>
-            <p>Mr. Atul Saikia</p>
-        </div>
-
-        <div class="card">
-            <i class="fa-solid fa-eye"></i>
-            <h3>Vision</h3>
-            <p>To create a strong foundation of knowledge and character.</p>
-        </div>
-
-        <div class="card">
-            <i class="fa-solid fa-scale-balanced"></i>
-            <h3>Values</h3>
-            <p>Discipline, Integrity, Respect, Excellence</p>
-        </div>
-    </div>
-</section>
-
-<!-- ===== ACADEMICS ===== -->
-<section id="academics" class="section light">
-    <h2>Academics</h2>
-    <ul class="list">
-        <li><i class="fa-solid fa-book"></i> Classes: Class 1 – 10</li>
-        <li><i class="fa-solid fa-graduation-cap"></i> Board: State Board</li>
-        <li><i class="fa-solid fa-flask"></i> Subjects: Math, Science, English, Social Science</li>
-        <li><i class="fa-solid fa-calendar-days"></i> Academic Calendar Available</li>
-    </ul>
-</section>
-
-<!-- ===== ADMISSIONS ===== -->
-<section id="admission" class="section">
-    <h2>Admissions</h2>
-    <p>Admissions are open for the new academic session.</p>
-
-    <ul class="list">
-        <li><i class="fa-solid fa-check"></i> Eligibility as per class norms</li>
-        <li><i class="fa-solid fa-file-pdf"></i> Admission Form Available</li>
-        <li><i class="fa-solid fa-phone"></i> Contact school office for details</li>
-    </ul>
-
-    <a href="#" class="btn">Download Admission Form</a>
-</section>
-
-<!-- ===== FACULTY ===== -->
-<section id="faculty" class="section light">
-    <h2>Our Faculty</h2>
-
-    <div class="cards">
-        <div class="card">
-            <i class="fa-solid fa-user"></i>
-            <h3>Experienced Teachers</h3>
-            <p>Dedicated & Qualified Faculty Members</p>
-        </div>
-
-        <div class="card">
-            <i class="fa-solid fa-chalkboard-teacher"></i>
-            <h3>Modern Teaching</h3>
-            <p>Student-friendly teaching approach</p>
-        </div>
-    </div>
-</section>
-
-<!-- ===== CONTACT ===== -->
-<section id="contact" class="section">
-    <h2>Contact Us</h2>
-
-    <div class="contact-info">
-        <p><i class="fa-solid fa-location-dot"></i> Vill: Dhopguri, PO: Nachansali</p>
-        <p><i class="fa-solid fa-phone"></i> +91 XXXXXXXXXX</p>
-        <p><i class="fa-solid fa-envelope"></i> nanaipariahs@gmail.com</p>
+    <div class="col-md-3">
+      <div class="neo-card">
+        <i class="fa-solid fa-user-graduate"></i>
+        <h5>Admissions</h5>
+        <p>Simple Online Admission Process</p>
+      </div>
     </div>
 
-    <form class="contact-form" onsubmit="submitForm(event)">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button class="btn">Send Message</button>
-    </form>
+    <div class="col-md-3">
+      <div class="neo-card">
+        <i class="fa-solid fa-chalkboard-teacher"></i>
+        <h5>Faculty</h5>
+        <p>Experienced & Dedicated Teachers</p>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="neo-card">
+        <i class="fa-solid fa-headset"></i>
+        <h5>Contact</h5>
+        <p>Always Ready to Help</p>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<footer>
-    <p>© 2026 Nanai Paria High School | All Rights Reserved</p>
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 ABC High School | Designed by Tarique Izaz</p>
 </footer>
 
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
