@@ -138,5 +138,80 @@ body {
   background: rgba(255,255,255,0.2);
   color: white;
 }
+/* LIGHT THEME (CONTACT PAGE) */
+.light-theme {
+  background: linear-gradient(to bottom, #f8fbff, #eef3f9);
+  color: #222;
+}
+
+/* Light Navbar */
+.light-nav {
+  background: rgba(255,255,255,0.9);
+  border-bottom: 1px solid #ddd;
+}
+
+.light-nav .navbar-brand {
+  color: #007bff !important;
+}
+
+/* Contact Section */
+.contact-section {
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+/* Contact Cards */
+.contact-card {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.contact-card h4 {
+  margin-bottom: 20px;
+}
+
+.contact-card i {
+  color: #007bff;
+  margin-right: 8px;
+}
+
+/* Inputs */
+.contact-card .form-control {
+  border-radius: 10px;
+}
+
+/* Light Button */
+.btn-light-glow {
+  background: linear-gradient(45deg, #007bff, #00b4ff);
+  color: white;
+  border-radius: 30px;
+  padding: 8px 22px;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-light-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,123,255,0.4);
+}
+
+/* Map */
+.map-card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.light-footer {
+  text-align: center;
+  padding: 15px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+}
+
+
 
 
