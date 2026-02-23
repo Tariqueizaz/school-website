@@ -42,21 +42,32 @@
             <div class="col-lg-9">
                 <div class="neo-card text-start">
                     
-                    <form action="https://formspree.io/f/mykdbjvk" method="POST" id="admissionForm">
+                    <div id="successMessage" class="alert alert-success d-none text-center">
+                        <i class="fa-solid fa-circle-check mb-2 fs-2"></i>
+                        <h4>Application Submitted!</h4>
+                        <p>Thank you, your admission details have been recorded successfully.</p>
+                    </div>
+
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLScwhZxccvhs4SoKVRL_efg69Q4qlWcfGoWSWL7vYFgoKoHz7Q/formResponse" 
+                          method="POST" 
+                          id="admissionForm" 
+                          target="hidden_iframe" 
+                          onsubmit="submitted=true;">
+                        
                         <div class="row g-4">
                             <div class="col-md-6">
                                 <label class="form-label small fw-bold text-info">Full Name of Student</label>
-                                <input type="text" name="Student Name" class="form-control" placeholder="Enter student name" required>
+                                <input type="text" name="entry.2005620554" class="form-control" placeholder="Enter student name" required>
                             </div>
 
                             <div class="col-md-6">
                                 <label class="form-label small fw-bold text-info">Father’s Name</label>
-                                <input type="text" name="Father Name" class="form-control" placeholder="Enter father's name" required>
+                                <input type="text" name="entry.1045781291" class="form-control" placeholder="Enter father's name" required>
                             </div>
 
                             <div class="col-md-4">
                                 <label class="form-label small fw-bold text-info">Class Applying For</label>
-                                <select name="Applying For Class" class="form-select" required>
+                                <select name="entry.1065046570" class="form-select" required>
                                     <option value="" selected disabled>Choose Class</option>
                                     <option value="Class 6">Class 6</option>
                                     <option value="Class 7">Class 7</option>
@@ -68,20 +79,18 @@
 
                             <div class="col-md-4">
                                 <label class="form-label small fw-bold text-info">Mobile Number</label>
-                                <input type="tel" name="Mobile Number" class="form-control" placeholder="+91" required>
+                                <input type="tel" name="entry.1166974658" class="form-control" placeholder="+91" required>
                             </div>
 
                             <div class="col-md-4">
                                 <label class="form-label small fw-bold text-info">Email Address</label>
-                                <input type="email" name="_replyto" class="form-control" placeholder="email@example.com">
+                                <input type="email" name="entry.839337160" class="form-control" placeholder="email@example.com">
                             </div>
 
                             <div class="col-12">
                                 <label class="form-label small fw-bold text-info">Residential Address</label>
-                                <textarea name="Address" class="form-control" rows="3" placeholder="Full address details..."></textarea>
+                                <textarea name="entry.1532789270" class="form-control" rows="3" placeholder="Full address details..."></textarea>
                             </div>
-
-                            <input type="text" name="_gotcha" style="display:none">
 
                             <div class="col-12 mt-4 text-center">
                                 <button type="submit" class="btn btn-glow w-100 py-3">
@@ -90,6 +99,10 @@
                             </div>
                         </div>
                     </form>
+
+                    <script type="text/javascript">var submitted=false;</script>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" 
+                    onload="if(submitted) {document.getElementById('admissionForm').classList.add('d-none'); document.getElementById('successMessage').classList.remove('d-none');}"></iframe>
 
                 </div>
             </div>
