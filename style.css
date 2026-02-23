@@ -1,226 +1,166 @@
+/* Import Modern Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* THEME VARIABLES */
+:root {
+    --primary-glow: #00f2fe;
+    --accent-blue: #4facfe;
+    --bg-gradient: radial-gradient(circle at top, #081a2f, #0b2a4a, #0e3a63);
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --text-main: #eaf4ff;
+}
+
+/* GLOBAL STYLES */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-/* GLOBAL DARK BLUE THEME (ALL PAGES) */
+
 body {
-  background: radial-gradient(circle at top, #081a2f, #0b2a4a, #0e3a63);
-  color: #eaf4ff;
+    background: var(--bg-gradient);
+    color: var(--text-main);
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-
-/* BACKGROUND */
-body.dark-theme {
-  background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
-  color: white;
-}
-
-
-/* GLASS NAVBAR - DARK BLUE */
+/* GLASS NAVBAR */
 .glass-nav {
-  backdrop-filter: blur(14px);
-  background: rgba(10, 35, 70, 0.75);
-  border-bottom: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    background: rgba(10, 35, 70, 0.75);
+    border-bottom: 1px solid var(--glass-border);
+    padding: 15px 0;
 }
 
 .navbar-brand {
-  color: #eaf4ff !important;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, #fff, var(--primary-glow));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-
-/* GLOW BUTTON */
-.btn-glow {
-  background: linear-gradient(45deg, #00f2fe, #4facfe);
-  color: #000;
-  border-radius: 30px;
-  padding: 8px 18px;
-  font-weight: 600;
-  box-shadow: 0 0 20px rgba(79,172,254,0.8);
-  transition: 0.3s;
+.nav-link {
+    transition: 0.3s;
+    font-weight: 400;
 }
 
-.btn-glow:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(79,172,254,1);
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-glow) !important;
+    text-shadow: 0 0 10px var(--primary-glow);
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero-section {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(120deg, rgba(0,0,0,0.6), rgba(0,0,0,0.2)),
-              url("assets/images/school.jpg") center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(8, 26, 47, 0.8), rgba(8, 26, 47, 0.6)),
+                url("https://images.unsplash.com/photo-1523050853064-85a19f042f56?q=80&w=2070") center/cover no-repeat;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  animation: glowText 2s infinite alternate;
+.glow-text {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 700;
+    animation: glowAnimation 3s infinite alternate;
 }
 
-.hero-content p {
-  font-size: 1.2rem;
-  opacity: 0.9;
+@keyframes glowAnimation {
+    from { text-shadow: 0 0 10px var(--accent-blue); }
+    to { text-shadow: 0 0 30px var(--primary-glow), 0 0 10px #fff; }
 }
 
-/* TEXT GLOW */
-@keyframes glowText {
-  from { text-shadow: 0 0 10px #4facfe; }
-  to { text-shadow: 0 0 30px #00f2fe; }
-}
-
-/* FEATURE SECTION */
+/* FEATURE SECTION OFFSET */
 .feature-section {
-  margin-top: -120px;
-  padding-bottom: 80px;
+    margin-top: -100px;
+    position: relative;
+    z-index: 10;
 }
 
-/* FUTURISTIC CARDS */
+/* NEO-GLASS CARDS */
 .neo-card {
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(15px);
-  border-radius: 20px;
-  padding: 30px;
-  text-align: center;
-  border: 1px solid rgba(255,255,255,0.2);
-  transition: 0.4s;
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid var(--glass-border);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
 }
 
 .neo-card i {
-  font-size: 45px;
-  margin-bottom: 15px;
-  color: #4facfe;
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var(--primary-glow);
+    display: block;
 }
 
 .neo-card:hover {
-  transform: translateY(-15px) scale(1.05);
-  box-shadow: 0 0 40px rgba(79,172,254,0.6);
+    transform: translateY(-12px);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--primary-glow);
+    box-shadow: 0 15px 40px rgba(0, 242, 254, 0.2);
+}
+
+/* BUTTONS */
+.btn-glow {
+    background: linear-gradient(45deg, var(--primary-glow), var(--accent-blue));
+    color: #051428 !important;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 35px;
+    font-weight: 600;
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+    transition: 0.3s;
+}
+
+.btn-glow:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 0 30px rgba(0, 242, 254, 0.7);
+}
+
+/* FORMS & INPUTS (Admission & Contact) */
+.form-control, .form-select {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid var(--glass-border) !important;
+    color: white !important;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 0 15px rgba(79, 172, 254, 0.5);
+    border-color: var(--primary-glow) !important;
 }
 
 /* FOOTER */
-/* DARK FOOTER */
 .footer {
-  text-align: center;
-  padding: 20px;
-  background: rgba(5, 20, 40, 0.8);
-  font-size: 14px;
-  letter-spacing: 1px;
-  color: #cfe8ff;
+    background: rgba(5, 20, 40, 0.95);
+    padding: 40px 20px;
+    margin-top: 80px;
+    border-top: 1px solid var(--glass-border);
+    color: #cfe8ff;
 }
 
-/* ADMISSION PAGE */
-.admission-section {
-  min-height: 100vh;
-  padding-top: 120px;
-  padding-bottom: 60px;
+/* UTILITIES */
+.icon-sm {
+    width: 45px;
+    height: 45px;
+    background: rgba(79, 172, 254, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-glow);
 }
-
-.admission-card {
-  max-width: 800px;
-  margin: auto;
-  padding: 40px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.2);
-}
-
-.admission-card h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.admission-card label {
-  font-weight: 500;
-}
-
-.admission-card .form-control {
-  background: rgba(255,255,255,0.15);
-  border: none;
-  color: white;
-}
-
-.admission-card .form-control:focus {
-  box-shadow: 0 0 10px #4facfe;
-  background: rgba(255,255,255,0.2);
-  color: white;
-}
-/* LIGHT THEME (CONTACT PAGE) */
-/* CONTACT CARD - DARK */
-.contact-card {
-  background: rgba(255,255,255,0.08);
-  padding: 30px;
-  border-radius: 18px;
-  box-shadow: 0 0 30px rgba(79,172,254,0.25);
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(255,255,255,0.2);
-}
-.contact-card .form-control {
-  background: rgba(255,255,255,0.15);
-  border: none;
-  color: #fff;
-}
-
-.contact-card .form-control::placeholder {
-  color: rgba(255,255,255,0.7);
-}
-
-.contact-card .form-control:focus {
-  background: rgba(255,255,255,0.25);
-  box-shadow: 0 0 10px #4facfe;
-  color: white;
-}
-
-/* Contact Section */
-.contact-section {
-  padding-top: 120px;
-  padding-bottom: 60px;
-}
-
-
-.contact-card h4 {
-  margin-bottom: 20px;
-}
-
-.contact-card i {
-  color: #007bff;
-  margin-right: 8px;
-}
-
-/* Inputs */
-.contact-card .form-control {
-  border-radius: 10px;
-}
-
-/* Light Button */
-.btn-light-glow {
-  background: linear-gradient(45deg, #007bff, #00b4ff);
-  color: white;
-  border-radius: 30px;
-  padding: 8px 22px;
-  border: none;
-  transition: 0.3s;
-}
-
-.btn-light-glow:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,123,255,0.4);
-}
-
-/* Map */
-.map-card {
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-
-
-
-
-
-
