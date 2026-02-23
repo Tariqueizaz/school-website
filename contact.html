@@ -2,125 +2,129 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Contact Us | ABC High School</title>
+<title>Contact Us | Nanai Paria High School</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<!-- Main CSS -->
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="dark-theme">
 
-<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg fixed-top glass-nav">
   <div class="container">
-
-    <!-- LOGO -->
     <a class="navbar-brand fw-bold" href="index.html">
-      <i class="fa-solid fa-school"></i> Nanai Paria High School
+      <i class="fa-solid fa-school"></i> NPHS
     </a>
 
-    <!-- TOGGLE BUTTON (MOBILE) -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- MENU LINKS -->
     <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-        <li class="nav-item">
-          <a class="nav-link text-white" href="index.html">Home</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link text-white" href="faculty.html">Faculty</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link text-white" href="admission.html">Admission</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link text-white" href="contact.html">Contact</a>
-        </li>
-
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="academics.html">Academics</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="faculty.html">Faculty</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="admission.html">Admission</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
       </ul>
     </div>
-
   </div>
 </nav>
 
+<section class="container" style="padding-top:140px; padding-bottom:60px;">
+  <div class="text-center mb-5">
+    <h1 class="fw-bold display-5">Get In Touch</h1>
+    <p class="opacity-75">Have questions? We're here to help.</p>
+  </div>
 
-<!-- CONTACT SECTION -->
-<section class="contact-section container">
   <div class="row g-4">
-
-    <!-- Contact Info -->
     <div class="col-md-5">
-      <div class="contact-card">
-        <h4>Contact Information</h4>
-        <p><i class="fa-solid fa-location-dot"></i> Vill Dhopguri, PO Nachansali</p>
-        <p><i class="fa-solid fa-phone"></i> +91 9XXXXXXXXX</p>
-        <p><i class="fa-solid fa-envelope"></i> abcschool@gmail.com</p>
-        <p><i class="fa-solid fa-clock"></i> Mon – Sat (9 AM – 4 PM)</p>
+      <div class="neo-card text-start h-100">
+        <h4 class="mb-4 text-info">Contact Information</h4>
+        
+        <div class="d-flex align-items-center mb-4">
+          <div class="icon-sm me-3"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <p class="mb-0 fw-bold">Address</p>
+            <small class="opacity-75">Vill Dhopguri, PO Nachansali, Assam</small>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center mb-4">
+          <div class="icon-sm me-3"><i class="fa-solid fa-phone"></i></div>
+          <div>
+            <p class="mb-0 fw-bold">Phone</p>
+            <small class="opacity-75">+91 9XXXXXXXXX</small>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center mb-4">
+          <div class="icon-sm me-3"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <p class="mb-0 fw-bold">Email</p>
+            <small class="opacity-75">nphs@gmail.com</small>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center">
+          <div class="icon-sm me-3"><i class="fa-solid fa-clock"></i></div>
+          <div>
+            <p class="mb-0 fw-bold">Office Hours</p>
+            <small class="opacity-75">Mon – Sat (9 AM – 4 PM)</small>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Contact Form -->
     <div class="col-md-7">
-      <div class="contact-card">
-        <h4>Send Us a Message</h4>
-
+      <div class="neo-card text-start">
+        <h4 class="mb-4 text-info">Send Us a Message</h4>
         <form>
-          <div class="mb-3">
-            <label>Your name</label>
-            <input type="text" class="form-control" required>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label small opacity-75">Your Name</label>
+              <input type="text" class="form-control" placeholder="Enter name" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small opacity-75">Email Address</label>
+              <input type="email" class="form-control" placeholder="Enter email" required>
+            </div>
+            <div class="col-12">
+              <label class="form-label small opacity-75">Your Message</label>
+              <textarea class="form-control" rows="4" placeholder="How can we help?" required></textarea>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-glow w-100 py-3 mt-2">
+                <i class="fa-solid fa-paper-plane me-2"></i> Send Message
+              </button>
+            </div>
           </div>
-
-          <div class="mb-3">
-            <label>Email</label>
-            <input type="email" class="form-control" required>
-          </div>
-
-          <div class="mb-3">
-            <label>Message</label>
-            <textarea class="form-control" rows="4" required></textarea>
-          </div>
-
-          <button class="btn btn-glow">
-            <i class="fa-solid fa-paper-plane"></i> Send Message
-          </button>
         </form>
-
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- MAP -->
-<section class="container mt-5 mb-5">
-  <div class="map-card">
+<section class="container mb-5">
+  <div class="neo-card p-2 overflow-hidden">
     <iframe 
-      src="https://www.google.com/maps?q=Assam&output=embed"
-      width="100%" height="300" style="border:0;" loading="lazy">
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3575.4523!2d92.0!3d26.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDAwJzAwLjAiTiA5MsKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890" 
+      width="100%" height="350" style="border:0; border-radius:15px;" allowfullscreen="" loading="lazy">
     </iframe>
   </div>
 </section>
 
-<footer class="footer">
-  <p>© 2026 Nanai Paria High School</p>
+<footer class="footer text-center">
+  <p>© 2026 Nanai Paria High School | Designed by Tarique Izaz</p>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
