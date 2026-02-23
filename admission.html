@@ -35,59 +35,62 @@
     <section class="container" style="padding-top:140px; padding-bottom:80px;">
         <div class="text-center mb-5">
             <h1 class="fw-bold glow-text">Student Admission</h1>
-            <p class="opacity-75">Start your journey with us. Please fill out the form below carefully.</p>
+            <p class="opacity-75">Start your journey with us. Fill out the form to apply online.</p>
         </div>
 
         <div class="row justify-content-center">
             <div class="col-lg-9">
                 <div class="neo-card text-start">
-                    <form id="admissionForm">
+                    
+                    <form action="https://formspree.io/f/mykdbjvk" method="POST" id="admissionForm">
                         <div class="row g-4">
                             <div class="col-md-6">
                                 <label class="form-label small fw-bold text-info">Full Name of Student</label>
-                                <input type="text" name="student_name" class="form-control" placeholder="John Doe" required>
+                                <input type="text" name="Student Name" class="form-control" placeholder="Enter student name" required>
                             </div>
 
                             <div class="col-md-6">
                                 <label class="form-label small fw-bold text-info">Father’s Name</label>
-                                <input type="text" name="father_name" class="form-control" placeholder="Robert Doe" required>
+                                <input type="text" name="Father Name" class="form-control" placeholder="Enter father's name" required>
                             </div>
 
                             <div class="col-md-4">
                                 <label class="form-label small fw-bold text-info">Class Applying For</label>
-                                <select name="class" class="form-select" required>
+                                <select name="Applying For Class" class="form-select" required>
                                     <option value="" selected disabled>Choose Class</option>
-                                    <option>Class 6</option>
-                                    <option>Class 7</option>
-                                    <option>Class 8</option>
-                                    <option>Class 9</option>
-                                    <option>Class 10</option>
+                                    <option value="Class 6">Class 6</option>
+                                    <option value="Class 7">Class 7</option>
+                                    <option value="Class 8">Class 8</option>
+                                    <option value="Class 9">Class 9</option>
+                                    <option value="Class 10">Class 10</option>
                                 </select>
                             </div>
 
                             <div class="col-md-4">
                                 <label class="form-label small fw-bold text-info">Mobile Number</label>
-                                <input type="tel" name="mobile" class="form-control" placeholder="+91 XXXXX XXXXX" required>
+                                <input type="tel" name="Mobile Number" class="form-control" placeholder="+91" required>
                             </div>
 
                             <div class="col-md-4">
                                 <label class="form-label small fw-bold text-info">Email Address</label>
-                                <input type="email" name="email" class="form-control" placeholder="example@mail.com">
+                                <input type="email" name="_replyto" class="form-control" placeholder="email@example.com">
                             </div>
 
                             <div class="col-12">
                                 <label class="form-label small fw-bold text-info">Residential Address</label>
-                                <textarea name="address" class="form-control" rows="3" placeholder="Enter your full permanent address..."></textarea>
+                                <textarea name="Address" class="form-control" rows="3" placeholder="Full address details..."></textarea>
                             </div>
+
+                            <input type="text" name="_gotcha" style="display:none">
 
                             <div class="col-12 mt-4 text-center">
                                 <button type="submit" class="btn btn-glow w-100 py-3">
                                     <i class="fa-solid fa-paper-plane me-2"></i> Submit Application
                                 </button>
-                                <p class="small opacity-50 mt-3"><i class="fa-solid fa-shield-halved me-1"></i> Your data is processed securely.</p>
                             </div>
                         </div>
                     </form>
+
                 </div>
             </div>
         </div>
